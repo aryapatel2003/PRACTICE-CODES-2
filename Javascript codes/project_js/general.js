@@ -8,3 +8,4 @@ const num = 100
 
 num < 80 ? console.log("less") : console.log("more")  ;
 
+

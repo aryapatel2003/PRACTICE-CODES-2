@@ -52,19 +52,23 @@
     }
 
     function validateForm2(){
-            const telephone = document.form2.telephone.value;
-            if ( isNaN(telephone) ) {
-                document.getElementById("errortelephone").innerHTML = "Entered Telephone Number is not correct."
-                return false;
-            }
-            else if(telephone.length < 10){
-                document.getElementById("errortelephone").innerHTML = "Entered Telephone Number at least 10 number."
-                return false;
-            }
-            else {
-                return true;
-            }
+        const telephone = document.form2.telephone.value;
+        if ( isNaN(telephone) ) {
+            document.getElementById("errortelephone").innerHTML = "Entered Telephone Number is not correct."
+            return false;
         }
+        else if(telephone.length < 10){
+            document.getElementById("errortelephone").innerHTML = "Entered Telephone Number at least 10 number."
+            return false;
+        }
+        else if(telephone.length > 10){
+            document.getElementById("errortelephone").innerHTML = "Entered Telephone Number is to longer."
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
 </script>
 
 

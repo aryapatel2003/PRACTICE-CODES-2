@@ -176,7 +176,7 @@ const result2 = lang.fill("next.js", 1, 2);
 console.log(result2);
 
 // ***in array i will convert value in element so use Array.form() method***
-console.log("Array.form() method");
+console.log("Array.from() method");
 
 const fromArray = Array.from("PATEL");
 
@@ -206,7 +206,7 @@ const findArray = num.find((x) => x > 30);
 console.log(findArray);
 
 // ***in array i will find value from array so use find() method***
-console.log("find() method");
+console.log("findIndex() method");
 
 const findIndexArray = num.findIndex((x) => x > 30);
 console.log(findIndexArray);
@@ -368,8 +368,8 @@ console.log("Dose Array somearr has any value > 50 ? : " + Resultsome);
 
 console.log(" ");
 console.log(" ");
-// ***if we get operation using some() method***
-console.log("some() method");
+// ***if we get operation using every() method***
+console.log("every() method");
 
 const everyarr = [90, 60, 70, 80];
 
@@ -415,7 +415,7 @@ console.log(slarr1);
 
 console.log(" ");
 console.log(" ");
-// ***if we get operation using sort() method***
+// ***if we get operation for arrange sequence sort() method***
 console.log("sort() method");
 
 const num1 = [8, 6, 4, 3, 7, 4, 1, 2];
@@ -423,6 +423,9 @@ const langauge = ["HTML", "CSS", "JAVA", "BOOTSTRAP", "PYTHON"];
 
 console.log("Sorted number : " + num1.sort());
 console.log("Sorted laguage : " + langauge.sort());
+
+console.log(" ");
+console.log(" ");
 
 console.log("the minimum number from array:  " + num1);
 const result3 = num1.sort();
@@ -492,6 +495,7 @@ const valueArray1 = splarr.values();
 
 console.log(valueArray1);
 
+console.log(valueArray1.next().value);
 console.log(valueArray1.next().value);
 console.log(valueArray1.next().value);
 console.log(valueArray1.next().value);

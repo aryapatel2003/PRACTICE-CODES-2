@@ -26,4 +26,3 @@ abc();
 ((name) => {
   console.log(`Patel Arya`);
 })("Arya");
-

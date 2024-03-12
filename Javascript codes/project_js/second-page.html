@@ -21,14 +21,12 @@
       <h1>BMI calculator</h1>
       <form>
         <p>
-          <label
-            >Height in cm :-
+          <label>Height in cm :-
             <input type="text" id="height" />
           </label>
         </p>
         <p>
-          <label
-            >Weight in kg :-
+          <label>Weight in kg :-
             <input type="text" id="weight" />
           </label>
         </p>
@@ -55,8 +53,8 @@
         results.innerHTML = `please give a valid weight`;
       } 
       else {
-        const bmi = (weight / ((height * height))).toFixed(2);
-        results.innerHTML = `<span>${bmi}</span>`;
+        const bmi = (weight / (height * height)).toFixed(2);
+        results.innerHTML = `<span>BMI : ${bmi}</span>`;
       }
     });
   </script>
