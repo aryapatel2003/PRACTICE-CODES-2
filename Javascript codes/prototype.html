@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        function Employee(firstName ,lastName){
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+
+        Employee.prototype.fullName = function(){
+            return this.firstName + " " + this.lastName;
+        }
+
+        const emp1 = new Employee("ABCd" , "EFG");
+        const emp2 = new Employee("hij" , "klm");
+
+        document.writeln(emp1.fullName() + "<br>");
+        document.writeln(emp2.fullName()+ "<br>");
+
+        console.log(" ");
+        console.log(" ");
+        console.log(" ");
+
+
+        function Employee(firstName ,lastName){
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+        
+        const emp3 = new Employee("Morvin" , "Patel");
+        const emp4 = new Employee("Dhaval" , "Patel");
+        
+        Employee.prototype.company = "Chemical industry";
+        Employee.prototype.company1 = "Learn Vern";
+
+        document.writeln(emp3.fullName() +  " : " + emp3.company + "<br>");
+        document.writeln(emp4.fullName() +  " : " + emp4.company1 + "<br>"+ "<br>");
+
+
+        class CompanyName_1{
+            constructor(){
+                this.companyname1 = "Endlos Technologies";
+            }
+        }
+
+        class Employee1 extends CompanyName_1{
+            constructor(id,name){
+                super();
+                this.id = id;
+                this.name = name;
+            }
+        }
+
+        const Employee_1 =new Employee1(1,"Arya");
+        document.writeln(Employee_1.id + " "+ Employee_1.name+ " "+ Employee_1.companyname1);
+
+        document.writeln("<br>");
+        document.writeln("<br>");
+
+        // *********without object call by class name**********
+
+        class Test{
+            static display(){
+                return "A Static Method is called";
+            }
+        }
+        document.writeln(Test.display());
+    </script>
+</body>
+</html>
