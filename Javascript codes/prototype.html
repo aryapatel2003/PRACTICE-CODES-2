@@ -6,8 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    
-
     <script>
         function Employee(firstName ,lastName){
             this.firstName = firstName;
@@ -23,11 +21,6 @@
 
         document.writeln(emp1.fullName() + "<br>");
         document.writeln(emp2.fullName()+ "<br>");
-
-        console.log(" ");
-        console.log(" ");
-        console.log(" ");
-
 
         function Employee(firstName ,lastName){
             this.firstName = firstName;
@@ -60,18 +53,95 @@
 
         const Employee_1 =new Employee1(1,"Arya");
         document.writeln(Employee_1.id + " "+ Employee_1.name+ " "+ Employee_1.companyname1);
-
         document.writeln("<br>");
         document.writeln("<br>");
-
+x
         // *********without object call by class name**********
-
         class Test{
             static display(){
                 return "A Static Method is called";
             }
         }
         document.writeln(Test.display());
+        document.writeln("<br>");
+        document.writeln("<br>");
+
+
+        // *********call static method by non-sttic method by reference of Class (class name)**********
+        
+        class Test1{
+            static display1(){
+                return "A Static Method is CALL by display1";
+            }
+            show(){
+                document.writeln("STM : " +Test1.display1() +"<br>");
+                return "No-static method call"
+            }
+        }
+
+        const t = new Test1();
+        t.show();
+        document.writeln("<br>")
     </script>
+
+
+<!-- ******************Getter and setter method********************* -->
+    <script>
+        class Student{
+            constructor(){
+                var name;
+                var marks;
+            }
+            setName(name){
+                this.name = name;
+            }
+            getName(){
+                return this.name;
+            }
+           
+            setMarks(marks){
+                this.marks = marks;
+            }
+            getMarks(){
+                return this.marks;
+            }
+        }
+        var stud = new Student();
+        stud.setName("Arya");
+        stud.setMarks(90);
+
+        var stud1 = new Student();
+        stud1.setName("morvin");
+        stud1.setMarks(80);
+        document.writeln(stud.getName() + " has secured " + stud.getMarks() + " marks" + "<br>");
+        document.writeln(stud1.getName() + " has secured " + stud1.getMarks() + " marks" + "<br>");
+    </script>
+
+<!-- ******************Getter and setter method using Prototype********************* -->
+<script>
+    function Student1(name,marks){
+        var sName = name;
+        var sMarks = marks;
+
+        Object.defineProperty(this,"name", {
+            get:function(){
+                return sName;
+            },
+            set:function(sName){
+                this.sName = sName;
+            }
+        });
+        Object.defineProperty(this,"marks", {
+            get:function(){
+                return sMarks;
+            },
+            set:function(sMarks){
+                this.sMarks = sMarks;
+            }
+        });
+    }
+    var stud1= new Student1("Arya",95)
+    document.writeln(stud1.name + " has secured " + stud1.marks + " marks"+ "<br>")
+</script>
 </body>
 </html>
