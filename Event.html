@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+        <p>
+            <div>
+                <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus error impedit id?</p>
+            </div>
+        </p>
+    </div>
+
+
+    <div id="btn">Delete</div>
+
+    <button id="clickbtn" onclick="chngbg(); text1(); text2()">Click button</button>
+    <p id="para1"></p>
+    <p id="para2"></p>
+
+    <button id="clickbtn1" >Click button1</button>
+    <p id="para11"></p>
+    <p id="para22"></p>
+</body>
+</html>
+<script>
+    document.querySelector('#para').addEventListener('click', function(){
+        document.writeln("e.target.parentNode");
+        let Remov = e.target.parentNode;
+        Remov.remov()
+    })
+   
+
+   function chngbg(){
+    document.body.style.background = "red"
+   }
+   function text1(){
+    document.getElementById('para1').innerHTML = "lorem"
+   }
+   function text2(){
+    document.getElementById('para2').innerHTML = "lorem2"
+   }
+
+//    ************************************************************
+
+   document.getElementById("clickbtn1").addEventListener('click',chngbgcolor);
+   document.getElementById("clickbtn1").addEventListener('click',text11);
+   document.getElementById("clickbtn1").addEventListener('click',text22);
+   function chngbgcolor(){
+    document.body.style.background = "ORANGE    "
+   }
+   function text11(){
+    document.getElementById('para11').innerHTML = "Hellow"
+   }
+   function text22(){
+    document.getElementById('para22').innerHTML = "world"
+   }
+   
+</script>

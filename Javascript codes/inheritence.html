@@ -41,8 +41,8 @@
             this.name = name;
         }
     }
-    const comppp =new companys("ENDLOS");
-        document.writeln("<br>"+ comppp.name + "<br>" + comppp.compname1 + "<br>" + comppp.compname2 +"<br>");
+    const comppp = new companys("ENDLOS");
+    document.writeln("<br>"+ comppp.name + "<br>" + comppp.compname1 + "<br>" + comppp.compname2 +"<br>");
 </script>
 
 <!-- *************third method*************** -->
@@ -52,16 +52,12 @@
     constructor() {
       this.endlos = "Endlos";
     }
-   
   }
-
   class Second {
     constructor() {
       this.Tech = "Technology";
     }
-    
   }
-
   class Employee extends Second {
     constructor() {
       super();
@@ -74,11 +70,12 @@
   const employeeMan = new Employee();
   document.writeln("<br>"+ employeeMan.First.endlos   );
   document.writeln("<br>"+ employeeMan.Tech +"<br>");
-
   
-                  //  **********
+                  //  ***********
+                  //  ***********
                   // second method
-                  //  **********
+                  //  ***********
+                  //  ***********
 
   class Classes {
     constructor(abc) {
@@ -109,8 +106,7 @@
 
 <script>
     class first{
-        ABC1(){
-            
+        ABC1(){ 
           ("Hello");
             document.writeln("Endlos Tech.");
         }
@@ -141,4 +137,23 @@
     newclass.ABCd2(); 
     
 </script> 
+
+<!-- ******************Inheritance Method in js********************* -->
+<script>
+  class Animal {
+    speak() {
+      document.writeln("<br>"+`${this.name} makes a noise.`);
+    }
+  }
+
+class Dog extends Animal {
+  constructor(name) {
+    super();
+    this.name = name;
+  }
+}
+
+const d = new Dog("Mitzie");
+d.speak();
+</script>
 </html>
