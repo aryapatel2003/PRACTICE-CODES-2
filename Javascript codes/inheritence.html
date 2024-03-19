@@ -1,48 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
-  
-</body> 
+</body>
 <!-- *************first method*************** -->
-
 <script>
-    class Moment extends Date{
-        constructor(){
-            super();
-        }
+  class Moment extends Date {
+    constructor() {
+      super();
     }
-
-    const moon = new Moment() ;
-    document.writeln("<br>"+ "Todays Date : " + moon.getDate() + "-" + moon.getMonth( ) +"- "+ moon.getFullYear() +"<br>");
+  }
+  const moon = new Moment();
+  document.writeln("<br>" + "Todays Date : " + moon.getDate() + "-" + moon.getMonth() + "- " + moon.getFullYear() + "<br>");
 </script>
 
 <!-- *************Second method*************** -->
-
 <script>
-    class first11{
-         constructor(){
-                this.compname1 = "Endlos Technologies";
-            }
+  class first11 {
+    constructor() {
+      this.compname1 = "Endlos Technologies";
     }
-    class second22{
-        constructor(){
-            this.compname2 = "ENDLOS FUrniture";
-        }
+  }
+  class second22 {
+    constructor() {
+      this.compname2 = "ENDLOS FUrniture";
     }
+  }
 
-    class companys extends (first11,second22)   {
-        constructor(name){
-            super();
-            this.name = name;
-        }
+  class companys extends (first11, second22) {
+    constructor(name) {
+      super();
+      this.name = name;
     }
-    const comppp = new companys("ENDLOS");
-    document.writeln("<br>"+ comppp.name + "<br>" + comppp.compname1 + "<br>" + comppp.compname2 +"<br>");
+  }
+  const comppp = new companys("ENDLOS");
+  document.writeln("<br>" + comppp.name + "<br>" + comppp.compname1 + "<br>" + comppp.compname2 + "<br>");
 </script>
 
 <!-- *************third method*************** -->
@@ -68,14 +66,14 @@
 
   // test it
   const employeeMan = new Employee();
-  document.writeln("<br>"+ employeeMan.First.endlos   );
-  document.writeln("<br>"+ employeeMan.Tech +"<br>");
-  
-                  //  ***********
-                  //  ***********
-                  // second method
-                  //  ***********
-                  //  ***********
+  document.writeln("<br>" + employeeMan.First.endlos);
+  document.writeln("<br>" + employeeMan.Tech + "<br>");
+
+  //  ***********
+  //  ***********
+  // second method
+  //  ***********
+  //  ***********
 
   class Classes {
     constructor(abc) {
@@ -90,70 +88,66 @@
     }
   }
 
-   const empempMan = new Employee1212();
-    document.writeln("<br>"+ empempMan.endlos);
-    document.writeln("<br>" +empempMan.Tech);
-
-
+  const empempMan = new Employee1212();
+  document.writeln("<br>" + empempMan.endlos);
+  document.writeln("<br>" + empempMan.Tech);
 
   // document.writeln("<br>"+`Endlos is ${employeeMan.First.endlos}!`+ employeeMan.First.endlos);
   // document.writeln("<br>"+`Tech is ${employeeMan.Tech}!`+ employeeMan.Tech);
-  
+
 </script>
 
 <!-- ******************Inheritance Method in js********************* -->
 
-
 <script>
-    class first{
-        ABC1(){ 
-          ("Hello");
-            document.writeln("Endlos Tech.");
-        }
+  class first {
+    ABC1() {
+      document.writeln("<br>" + "Endlos Tech.");
     }
-    class second{
-        ABC2(){
-            document.writeln("World");
-        }
+  }
+  class second {
+    ABC2() {
+      document.writeln("<br>" + "World");
     }
+  }
 
-    class empy {
-        constructor(){
-            this.sss = new first();
-            this.rrr = new second();
-        }
-
-        ABCd1(){
-            this.sss.ABC1();
-        }
-        ABCd2(){
-            this.rrr.ABC2();
-        }
+  class empy {
+    constructor() {
+      this.sss = new first();
+      this.rrr = new second();
     }
 
-    let newclass = new empy();
+    ABCd1() {
+      this.sss.ABC1();
+    }
+    ABCd2() {
+      this.rrr.ABC2();
+    }
+  }
 
-    newclass.ABCd1();
-    newclass.ABCd2(); 
-    
-</script> 
+  let newclass = new empy();
+
+  newclass.ABCd1();
+  newclass.ABCd2();
+
+</script>
 
 <!-- ******************Inheritance Method in js********************* -->
 <script>
   class Animal {
     speak() {
-      document.writeln("<br>"+`${this.name} makes a noise.`);
+      document.writeln("<br>" + `${this.name} makes a noise.`);
     }
   }
 
-class Dog extends Animal {
-  constructor(name) {
-    super();
-    this.name = name;
+  class Dog extends Animal {
+    constructor(name) {
+      super();
+      this.name = name;
+    }
   }
-}
 
-const d = new Dog("Mitzie");
-d.speak();
+  const d = new Dog("Mitzie");
+  d.speak();
 </script>
 </html>

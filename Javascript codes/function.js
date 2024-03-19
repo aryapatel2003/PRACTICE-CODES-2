@@ -134,8 +134,6 @@ function secondFunction() {
 secondFunction();
 
 
-
-
 function f1(){
     // console.log("functio2 :" + f2(x = 2))
 
@@ -147,7 +145,7 @@ function f1(){
 
 function f2(x = 2){
     var p = x*x;
-    console.log("power value" + p)
+    console.log("power value :" + p)
     // return ;
 }
 
